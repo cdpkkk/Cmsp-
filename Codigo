@@ -1,0 +1,68 @@
+from asyncio import Queue
+from multiprocessing import Process
+import time 
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager 
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import pyautogui
+
+servico = Service(ChromeDriverManager().install())
+
+navegador = webdriver.Chrome(service=servico)
+# ir pra pagina especifica
+navegador.get("https://cmspweb.ip.tv/login")
+# encontrar algo do site
+
+def verifica(elemento):
+  while True:
+    try:
+      elt = navegador.find_element(By.XPATH, elemento)
+      break
+    except:
+      pass
+  return elt
+
+verifica('//*[@id="access-student"]').click()
+
+verifica('//*[@id="ra-student"]').send_keys('MEU RA')
+
+verifica('//*[@id="digit-student"]').send_keys('1')
+
+verifica('//*[@id="password-student"]').send_keys('SENHA')
+
+verifica('//*[@id="btn-login-student"]').click() #acabou o login
+
+verifica('//*[@id="lproom_r0231894bdf9e9560e-l"]').click() #clicou em paula santos
+
+verifica('//*[@id="roomDetailTms"]').click() #clicou em atividades
+
+iframe = verifica('//*[@id="tms-area-body"]/iframe')
+navegador.switch_to.frame(iframe)
+
+elemento = verifica('//*[@id="root"]/div[2]/div/div[1]/div/div/div[1]/div').click() #ERRO #clicou em concluido
+
+verifica( '//*[@id="root"]/div[2]/div/div[2]/div/div/div[2]/div[1]/div/table/tbody/tr[3]/td[4]/div/button').click()
+
+verifica( '//*[@id="root"]/div[2]/div[2]/div[1]/div[2]/div/p[1]').click()
+
+
+verifica('//*[@id="root"]/div[2]/div[2]/div[1]/div[2]/div/p[1]') #seleciona tudo
+pyautogui.hotkey('ctrl','a')
+time.sleep(1)
+
+verifica('//*[@id="root"]/div[2]/div[2]/div[1]/div[2]/div/p[1]') #copia
+pyautogui.hotkey('ctrl','c')
+time.sleep(1)
+
+pyautogui.click (883,995, duration=0.5)
+pyautogui.click (229,60, duration=0.5) 
+pyautogui.typewrite("chatgpt.com")
+pyautogui.press('enter')  
+time.sleep(1.5)
+pyautogui.hotkey('ctrl','v')                                                               
+pyautogui.press('enter')                                                               
+time.sleep(20)
+pyautogui.click(758,867, duration=0.5)
+
