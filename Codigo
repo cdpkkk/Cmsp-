@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import pyautogui
+import pyperclip
 
 servico = Service(ChromeDriverManager().install())
 
@@ -26,11 +27,11 @@ def verifica(elemento):
 
 verifica('//*[@id="access-student"]').click()
 
-verifica('//*[@id="ra-student"]').send_keys('MEU RA')
+verifica('//*[@id="ra-student"]').send_keys('0000111245122')
 
-verifica('//*[@id="digit-student"]').send_keys('1')
+verifica('//*[@id="digit-student"]').send_keys('5')
 
-verifica('//*[@id="password-student"]').send_keys('SENHA')
+verifica('//*[@id="password-student"]').send_keys('ESCOLa@2024')
 
 verifica('//*[@id="btn-login-student"]').click() #acabou o login
 
@@ -56,13 +57,60 @@ verifica('//*[@id="root"]/div[2]/div[2]/div[1]/div[2]/div/p[1]') #copia
 pyautogui.hotkey('ctrl','c')
 time.sleep(1)
 
-pyautogui.click (883,995, duration=0.5)
+pyautogui.click (618,1005, duration=0.5)
 pyautogui.click (229,60, duration=0.5) 
 pyautogui.typewrite("chatgpt.com")
 pyautogui.press('enter')  
-time.sleep(1.5)
-pyautogui.hotkey('ctrl','v')                                                               
+time.sleep(5)
+pyautogui.hotkey('ctrl','v')
+pyautogui.typewrite("agora você vai responder minhas perguntas de forma você vai indentificar a resposta correta e vai responder da seguinte maneira: A alternativa correta é A) se caso for a A A alternativa correta é B se caso for B e assim por diante apenas isso, qualquer texto ou explicação sobre o assunto é desnecessaria e sera vista de forma agressiva, então não faça isso.")
+time.sleep(6)                                                               
 pyautogui.press('enter')                                                               
-time.sleep(20)
-pyautogui.click(758,867, duration=0.5)
+time.sleep(25)
+pyautogui.click(767,857, duration=0.5)
+time.sleep(3)
+pyautogui.click(559,766, duration=0.5)   # CLICA 2 VEZES PARA SELECIONAR A PALAVRA
+pyautogui.click(559,766, duration=0.5)   # CLICA 2 VEZES PARA SELECIONAR A PALAVRA
+pyautogui.hotkey('ctrl','c')
+pyautogui.click(660,989, duration=0.5)
+time.sleep(1124142141)
 
+
+#  TESTES .  TESTES  . TESTES . TESTES . TESTES .  TESTES  . TESTES . TESTES
+
+
+#def normalize_text(text):
+#    return text.strip().lower()
+
+#def get_copied_text():
+#    return pyperclip.paste()
+
+#    PERGUNTA 1 PERGUNTA 1 PERGUNTA 1 PERGUNTA 1  #
+#parte_copiada = get_copied_text()
+
+#a = "Portanto a alternativa correta é a A)"
+#b = "Portanto a alternativa correta é a B)"
+#c = "Portanto a alternativa correta é a C)"
+#d = "Portanto a alternativa correta é a D)"
+
+#parte_copiada_normalizada = normalize_text(parte_copiada)
+
+#if parte_copiada == a: == normalize_text(a):
+#     alternativa_a = driver.find_element(By.XPATH, '//*[@id="root"]/div[2]/div[2]/div[2]/div[1]/div/span/input')
+#     alternativa_a.click()
+
+#elif parte_copiada == b: == normalize_text(b):
+#    alternativa_b = driver.find_element(By.XPATH, '//*[@id="root"]/div[2]/div[2]/div[2]/div[2]/div/span/input')
+#    alternativa_b.click()
+
+#elif parte_copiada == c: == normalize_text(c):
+#    alternativa_c = driver.find_element(By.XPATH, '//*[@id="root"]/div[2]/div[2]/div[2]/div[2]/div/span/input')
+#    alternativa_c.click()
+
+
+#elif parte_copiada == d: == normalize_text(d):
+#    alternativa_d = driver.find_element(By.XPATH, '//*[@id="root"]/div[2]/div[2]/div[2]/div[4]/div/span/input')
+#    alternativa_d.click()
+
+#else:
+#    print("Não Funcionou!")
