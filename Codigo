@@ -63,7 +63,9 @@ pyautogui.typewrite("chatgpt.com")
 pyautogui.press('enter')  
 time.sleep(5)
 pyautogui.hotkey('ctrl','v')
+
 pyautogui.typewrite("agora você vai responder minhas perguntas de forma você vai indentificar a resposta correta e vai responder da seguinte maneira: A alternativa correta é A) se caso for a A A alternativa correta é B se caso for B e assim por diante apenas isso, qualquer texto ou explicação sobre o assunto é desnecessaria e sera vista de forma agressiva, então não faça isso.")
+
 time.sleep(6)                                                               
 pyautogui.press('enter')                                                               
 time.sleep(25)
