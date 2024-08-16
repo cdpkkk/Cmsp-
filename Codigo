@@ -116,3 +116,31 @@ time.sleep(1124142141)
 
 #else:
 #    print("Não Funcionou!")
+
+#ABRIR CHATGPT, ABRIR CHATGPT
+
+#driver.execute_script("window.open('');")
+
+# Alterna para a nova guia
+#driver.switch_to.window(driver.window_handles[1])
+
+## Abre o ChatGPT na nova guia
+#driver.get("https://chat.openai.com/")
+
+#VOLTAR PARA GUIA DO CMSP 
+
+#driver.switch_to.window(driver.window_handles[0])
+
+# Especifique o caminho para o perfil do Chrome que deseja usar
+options = webdriver.ChromeOptions()
+options.add_argument("user-data-dir=/caminho/para/seu/perfil/chrome")
+
+# Inicializa o driver com o perfil
+driver = webdriver.Chrome(options=options)
+
+# Abre a página desejada (exemplo: página de login)
+driver.get("https://chat.openai.com/")
+
+# Agora, se o login já estiver salvo no perfil, você será conectado automaticamente
+
+
